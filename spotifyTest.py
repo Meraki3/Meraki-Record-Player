@@ -3,9 +3,9 @@ import spotipy
 from spotipy.oauth2 import SpotifyOAuth
 from time import sleep
 
-DEVICE_ID="YOUR_DEVICE_ID"
-CLIENT_ID="YOUR_CLIENT_ID"
-CLIENT_SECRET="YOUR_CLIENT_SECRET"
+DEVICE_ID="487176ae060fa8e78a39f41230489782ddeea49a"
+CLIENT_ID="ae31cd85f0494ee19274ed1595efedf6"
+CLIENT_SECRET="1c527945e4524a7ba030182a2cb07cf4"
 
 # Spotify Authentication
 sp = spotipy.Spotify(auth_manager=SpotifyOAuth(client_id=CLIENT_ID,
@@ -18,4 +18,4 @@ sp = spotipy.Spotify(auth_manager=SpotifyOAuth(client_id=CLIENT_ID,
 sp.transfer_playback(device_id=DEVICE_ID, force_play=False)
 
 # Play the spotify track at URI with ID 45vW6Apg3QwawKzBi03rgD (you can swap this for a diff song ID below)
-sp.start_playback(device_id=DEVICE_ID, uris=['spotify:track:45vW6Apg3QwawKzBi03rgD'])
+sp.start_playback(device_id="", context_uri='spotify:album:3cf4iSSKd8ffTncbtKljXw?si=Z3eeI0TjRgi-p0V00aD9dg')
